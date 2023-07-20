@@ -10,12 +10,13 @@ export default function MarqueeBlue() {
         position: 'relative',
         background: (theme) => theme.palette.primary.main,
         height: { xs: 96, md: 200 },
-        ml: { xs: '-24px', md: '-40px', lg: '-6rem' },
-        width: {
-          xs: 'calc(100% + 48px)',
-          md: 'calc(100% + 80px)',
-          lg: 'calc(100% + 12rem)'
-        },
+        width: '100%',
+        // ml: { xs: '-24px', md: '-40px', lg: '-6rem' },
+        // width: {
+        //   xs: 'calc(100% + 48px)',
+        //   md: 'calc(100% + 80px)',
+        //   lg: 'calc(100% + 12rem)'
+        // },
         overflow: 'hidden'
       }}
     >

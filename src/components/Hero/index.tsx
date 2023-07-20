@@ -16,12 +16,24 @@ export default function Hero() {
     <>
       <ShowOnMobile>
         <Typography
+          component="div"
           fontSize={{ xs: 62, sm: 100 }}
           width="100%"
           whiteSpace={'pre'}
           variant="h5"
+          position="relative"
         >
           {title}
+          <Img
+            src={eyeUrl}
+            alt=""
+            sx={{
+              width: { xs: 60, sm: 80 },
+              position: 'absolute',
+              right: 0,
+              bottom: { xs: -20, sm: 0 }
+            }}
+          />
         </Typography>
       </ShowOnMobile>
       <Box

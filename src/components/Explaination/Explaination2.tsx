@@ -33,6 +33,7 @@ export default function Explaination2() {
       display={{ xs: 'grid', md: 'flex' }}
       gap={{ xs: 32, md: 60 }}
       width={{ xs: '100vw', md: 'auto' }}
+      mb={{ xs: 40, sm: '6rem' }}
     >
       <Box display="grid">
         {content.map((content, index) => (
@@ -71,7 +72,7 @@ export default function Explaination2() {
           src={pole2Url}
           alt=""
           sx={{
-            width: { xs: 120, md: 'auto' },
+            width: { xs: 120, sm: 200, md: 302 },
             height: { xs: 'auto', md: 'auto' }
           }}
         />
