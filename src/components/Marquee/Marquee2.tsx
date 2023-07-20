@@ -1,7 +1,6 @@
 'use client'
 import { Box } from '@mui/material'
 import marquee_url from '@/assets/img/marquee2.png'
-import Image from 'next/image'
 import { AnimatedBox2 } from './AnimatedBox'
 import Img from '../Image/image'
 

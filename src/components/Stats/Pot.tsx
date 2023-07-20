@@ -1,6 +1,7 @@
 'use client'
-
+// @ts-ignore
 import barcodeUrl from '@/assets/svg/barcode.svg?.url'
+// @ts-ignore
 import potUrl from '@/assets/svg/pot.svg?.url'
 import { Box, styled } from '@mui/material'
 import Img from '../Image/image'

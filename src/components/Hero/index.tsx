@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import poleUrl from '@/assets/img/pole.png'
+// @ts-ignore
 import eyeUrl from '@/assets/svg/eye.svg?url'
+// @ts-ignore
 import headUrl from '@/assets/svg/head.svg?url'
 import Img from '../Image/image'
 import { HideOnMobile, ShowOnMobile } from '@/theme'

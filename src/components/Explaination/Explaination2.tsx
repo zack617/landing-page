@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import Img from '../Image/image'
+// @ts-ignore
 import explainationUrl from '@/assets/svg/explaination2.svg?.url'
 import pole2Url from '@/assets/img/pole2.png'
 

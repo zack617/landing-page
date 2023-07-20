@@ -62,8 +62,6 @@ export default function Slides() {
             }}
             slidesPerView={2.2}
             spaceBetween={40}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             {slides.map((item, idx) => (
               <SwiperSlide key={item[1]}>

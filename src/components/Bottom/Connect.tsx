@@ -4,7 +4,7 @@ import { Box, Typography, styled, useTheme } from '@mui/material'
 import Wallet from '@/assets/svg/wallet.svg'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 
-const StyledWallet = styled(Wallet)()
+const StyledWallet = styled(Wallet)({})
 
 export default function Connect() {
   const theme = useTheme()

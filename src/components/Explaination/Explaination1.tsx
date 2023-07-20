@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import Img from '../Image/image'
+// @ts-ignore
 import explainationUrl from '@/assets/svg/explaination1.svg?.url'
 
 export default function Explaination1() {
@@ -23,9 +24,9 @@ export default function Explaination1() {
           asset and the settlement currency differ, allowing traders to
           speculate on asset values without direct price exposure. For instance,
           in a Quanto BTC/USDT futures contract, the underlying asset is the
-          BTC/USDT exchange rate, but it's settled in an altcoin like PEPE. The
-          contract uses a fixed multiplier unaffected by the USDT price of PEPE,
-          enabling traders to take long or short positions on the BTC/USDT
+          BTC/USDT exchange rate, but it&apos;s settled in an altcoin like PEPE.
+          The contract uses a fixed multiplier unaffected by the USDT price of
+          PEPE, enabling traders to take long or short positions on the BTC/USDT
           exchange rate without handling BTC or USDT directly. Traders provide
           margin in PEPE and gain or lose PEPE with changes in the BTC/USDT
           exchange rate, thus integrating altcoin market dynamics into trading

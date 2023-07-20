@@ -10,25 +10,27 @@ import Bottom from '@/components/Bottom'
 
 export default function Home() {
   return (
-    <Box
-      component="main"
-      display="flex"
-      flexDirection={'column'}
-      alignItems={'center'}
-      px={{ xs: '24px', md: '40px', lg: '6rem' }}
-      pt={{ xs: '28px', md: '3rem' }}
-      minHeight={'100vh'}
-      gap={{ xs: 42, sm: 62, md: 100 }}
-    >
-      <MarqueeTop />
-      <Hero />
-      <Marquee2 />
-      <Stats />
-      <MarqueeBlue />
-      <Explaination1 />
-      <Marquee2 />
-      <Explaination2 />
+    <>
+      <Box
+        component="main"
+        display="flex"
+        flexDirection={'column'}
+        alignItems={'center'}
+        px={{ xs: '24px', md: '40px', lg: '6rem' }}
+        pt={{ xs: '28px', md: '3rem' }}
+        minHeight={'100vh'}
+        gap={{ xs: 42, sm: 62, md: 100 }}
+      >
+        <MarqueeTop />
+        <Hero />
+        <Marquee2 />
+        <Stats />
+        <MarqueeBlue />
+        <Explaination1 />
+        <Marquee2 />
+        <Explaination2 />
+      </Box>
       <Bottom />
-    </Box>
+    </>
   )
 }

@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 'use client'
+// @ts-ignore
 import buttonBg from '@/assets/svg/button_bg.svg?url'
+// @ts-ignore
 import buttonBgWhite from '@/assets/svg/button_bg_white.svg?url'
 import { CssBaseline } from '@mui/material'
 

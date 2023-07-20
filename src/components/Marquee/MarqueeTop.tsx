@@ -1,5 +1,6 @@
 'use client'
 import { Box } from '@mui/material'
+// @ts-ignore
 import marquee_url from '@/assets/svg/marquee_top.svg?url'
 import Image from 'next/image'
 import { AnimatedBox } from './AnimatedBox'

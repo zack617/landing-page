@@ -1,7 +1,11 @@
 import { Box, Typography } from '@mui/material'
+// @ts-ignore
 import rec1Url from '@/assets/svg/rectangle1.svg?url'
+// @ts-ignore
 import rec2Url from '@/assets/svg/rectangle2.svg?url'
+// @ts-ignore
 import rec3Url from '@/assets/svg/rectangle3.svg?url'
+// @ts-ignore
 import rec4Url from '@/assets/svg/rectangle4.svg?url'
 import Pot from './Pot'
 
