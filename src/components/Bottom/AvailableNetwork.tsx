@@ -11,8 +11,8 @@ export default function AvailableNetwork() {
       borderBottom={'1px solid #000000'}
     >
       <Box
-        padding={{ xs: '24px', md: '6rem' }}
-        borderBottom={{ xs: '1px solid #000000', md: undefined }}
+        padding={{ xs: '40px 24px 60px', md: '6rem' }}
+        borderBottom={{ xs: '1px solid #000000', md: 'none' }}
         borderRight={{ xs: undefined, md: '1px solid #000000' }}
       >
         <Typography variant="h5" fontSize={{ xs: 32, md: 69 }} maxWidth={510}>

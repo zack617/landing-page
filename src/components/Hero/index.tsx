@@ -23,14 +23,15 @@ export default function Hero() {
         </Typography>
       </ShowOnMobile>
       <Box
-        maxWidth={'100%'}
+        maxWidth={1440}
+        overflow={'hidden'}
         maxHeight={'90vh'}
         display="grid"
         width={'100%'}
         justifyItems={'center'}
         gridTemplateColumns={'auto 1fr auto'}
         alignItems={'stretch'}
-        gap={23}
+        gap={{ xs: 0, md: 23 }}
       >
         <Img
           src={poleUrl}
@@ -44,7 +45,7 @@ export default function Hero() {
         <HideOnMobile>
           <Box flexGrow={1}>
             <Typography
-              fontSize={{ md: 70, lg: 110 }}
+              fontSize={{ md: 79, lg: 110 }}
               maxWidth={790}
               whiteSpace={'pre'}
               variant="h5"
@@ -55,35 +56,48 @@ export default function Hero() {
             <Typography whiteSpace={'pre'}>{subtitle}</Typography>
           </Box>
         </HideOnMobile>
-        <Box display={'flex'} height="100%">
+        <ShowOnMobile>
           <Box
             display="flex"
             flexDirection={'column'}
             justifyContent={'space-between'}
+            height={'100%'}
+            alignItems={'center'}
           >
-            <ShowOnMobile>
-              <Typography
-                whiteSpace={'break-spaces'}
-                fontSize={14}
-                fontWeight={500}
-                textAlign={'center'}
-              >
-                {subtitle}
-              </Typography>
-            </ShowOnMobile>
-            <HideOnMobile>
+            <Typography
+              whiteSpace={'break-spaces'}
+              fontSize={14}
+              fontWeight={500}
+              textAlign={'center'}
+            >
+              {subtitle}
+            </Typography>
+            <Img src={headUrl} alt="" sx={{ height: 120 }} />
+          </Box>
+        </ShowOnMobile>
+        <Box display={'flex'} height="100%">
+          <HideOnMobile>
+            <Box
+              display="flex"
+              height="100%"
+              flexDirection={'column'}
+              justifyContent={'space-between'}
+              alignItems={'center'}
+              width={'40%'}
+            >
               <Img
                 src={eyeUrl}
                 alt=""
                 sx={{ width: { xs: 80, md: 100, lg: 'auto' } }}
               />
-            </HideOnMobile>
-            <Img
-              src={headUrl}
-              alt=""
-              sx={{ height: { xs: 80, md: 100, lg: 'auto' } }}
-            />
-          </Box>
+
+              <Img
+                src={headUrl}
+                alt=""
+                sx={{ height: { md: 100, lg: 'auto' } }}
+              />
+            </Box>
+          </HideOnMobile>
           <Img
             src={poleUrl}
             alt=""

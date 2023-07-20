@@ -3,9 +3,7 @@ import rec1Url from '@/assets/svg/rectangle1.svg?url'
 import rec2Url from '@/assets/svg/rectangle2.svg?url'
 import rec3Url from '@/assets/svg/rectangle3.svg?url'
 import rec4Url from '@/assets/svg/rectangle4.svg?url'
-import barcodeUrl from '@/assets/svg/barcode.svg?.url'
-import potUrl from '@/assets/img/pot.png'
-import Img from '../Image/image'
+import Pot from './Pot'
 
 export default function Stats() {
   return (
@@ -21,7 +19,7 @@ export default function Stats() {
           '&>div': {
             backgroundSize: '100% 100%',
             backgroundPosition: 'center center',
-            padding: { xs: 20, md: '60px' },
+            padding: { xs: 20, md: '40px', lg: '60px' },
             position: 'relative'
           },
           '& h5': {
@@ -30,9 +28,10 @@ export default function Stats() {
           },
           '& h6': {
             position: 'absolute',
-            bottom: { xs: 20, md: 60 },
-            right: { xs: 20, md: 60 },
-            fontSize: { xs: 24, md: 95 }
+            bottom: { xs: 20, md: 60, lg: 70 },
+            right: { xs: 20, md: 60, lg: 70 },
+            fontSize: { xs: 24, md: 95 },
+            lineHeight: 0.8
           }
         }}
       >
@@ -42,7 +41,9 @@ export default function Stats() {
           }}
         >
           <Typography variant="h5">Staking Fees</Typography>
-          <Typography variant="h6">$109,000</Typography>
+          <Typography variant="h6" textAlign={'right'}>
+            $109,000
+          </Typography>
         </Box>
         <Box
           sx={{
@@ -58,7 +59,7 @@ export default function Stats() {
           }}
         >
           <Typography variant="h5">Collateral Types</Typography>
-          <Typography variant="h6">
+          <Typography variant="h6" textAlign={'right'}>
             12345 <span>users</span>
           </Typography>
         </Box>
@@ -73,17 +74,7 @@ export default function Stats() {
           </Typography>
         </Box>
       </Box>
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems={'center'}
-        width="100%"
-        sx={{}}
-      >
-        <Img src={barcodeUrl} alt="" />
-        <Img src={potUrl} alt="" />
-        <Img src={barcodeUrl} alt="" />
-      </Box>
+      <Pot />
     </>
   )
 }

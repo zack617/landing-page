@@ -29,7 +29,7 @@ export default function Connect() {
           <br /> $krav
         </Typography>
       </ShowOnMobile>
-      <StyledWallet width={{ xs: '312px', md: 'auto' }} />
+      <StyledWallet sx={{ width: { xs: '312px', sm: '300px', md: '418px' } }} />
     </Box>
   )
 }

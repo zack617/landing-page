@@ -40,7 +40,9 @@ export default function Navbar() {
               </Button>
             ))}
             <Button variant="contained">
-              <Typography variant="h5">Launch App</Typography>
+              <Typography variant="h5" whiteSpace={'nowrap'}>
+                Launch App
+              </Typography>
             </Button>
           </Box>
         </Toolbar>
