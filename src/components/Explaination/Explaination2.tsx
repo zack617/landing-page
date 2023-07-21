@@ -33,7 +33,7 @@ export default function Explaination2() {
       display={{ xs: 'grid', md: 'flex' }}
       gap={{ xs: 32, md: 60 }}
       width={{ xs: '100vw', md: 'auto' }}
-      mb={{ xs: 40, sm: '6rem' }}
+      mb={{ xs: 80, sm: '120px' }}
     >
       <Box display="grid">
         {content.map((content, index) => (
@@ -62,7 +62,7 @@ export default function Explaination2() {
           </Box>
         ))}
       </Box>
-      <Box display="grid" justifyItems={'center'} gap={{ xs: 32, md: 66 }}>
+      <Box display="grid" justifyItems={'center'} gap={66}>
         <Img
           src={explainationUrl}
           alt=""

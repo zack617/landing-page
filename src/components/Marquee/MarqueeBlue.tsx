@@ -9,9 +9,9 @@ export default function MarqueeBlue() {
       sx={{
         position: 'relative',
         background: (theme) => theme.palette.primary.main,
-        height: { xs: 96, md: 200 },
+        height: { xs: 96, md: 212 },
         width: '100%',
-        // ml: { xs: '-24px', md: '-40px', lg: '-6rem' },
+        // ml: { xs: '-24px', md: '-40px', lg: '-120px' },
         // width: {
         //   xs: 'calc(100% + 48px)',
         //   md: 'calc(100% + 80px)',
@@ -20,7 +20,7 @@ export default function MarqueeBlue() {
         overflow: 'hidden'
       }}
     >
-      <AnimatedBox sx={{ top: { xs: 6, md: -25 } }}>
+      <AnimatedBox sx={{ top: { xs: 6, md: -7 } }}>
         <Typography
           fontSize={{ xs: 64, md: 180 }}
           variant="h5"

@@ -124,7 +124,8 @@ export const override: (palette: any) => any & {
         color: palette.text.primary + '!important',
         fontWeight: 700,
         '&:hover, :active': {
-          backgroundColor: palette.background.paper
+          color: '#757575!important',
+          background: 'transparent'
         }
       },
       contained: {
@@ -168,7 +169,8 @@ export const override: (palette: any) => any & {
         fontSize: 28,
         fontWeight: 500,
         fontFamily: FONTS.title,
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        lineHeight: '100%'
       },
       h6: {
         fontSize: 22,

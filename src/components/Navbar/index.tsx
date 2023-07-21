@@ -8,6 +8,7 @@ import {
   Typography
 } from '@mui/material'
 import MobileMenu from './MobileMenu'
+import { HideOnMobile, ShowOnMobile } from '@/theme'
 
 const pages = ['COMMUNITY', 'GOVERNANCE', 'DOCS']
 
@@ -16,12 +17,17 @@ export default function Navbar() {
     <AppBar
       position="static"
       sx={{
-        padding: '20px 40px'
+        padding: { xs: '12px 24px', md: '20px 40px' }
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Logo />
+          <HideOnMobile>
+            <Logo />
+          </HideOnMobile>
+          <ShowOnMobile>
+            <Logo style={{ width: 90, height: 'auto' }} viewBox="0 0 135 30" />
+          </ShowOnMobile>
           <MobileMenu pages={pages} />
 
           <Box

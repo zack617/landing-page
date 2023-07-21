@@ -5,7 +5,7 @@ export default function AuditedBy() {
     <Box
       display="grid"
       justifyItems={{ xs: 'left', sm: 'center' }}
-      padding={{ xs: '80px 24px', md: '10rem 6rem' }}
+      padding={{ xs: '80px 24px', md: '10rem 120px' }}
       borderTop="1px solid #000000"
     >
       <Typography

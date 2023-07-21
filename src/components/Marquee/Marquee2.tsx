@@ -1,8 +1,10 @@
 'use client'
 import { Box } from '@mui/material'
 import marquee_url from '@/assets/img/marquee2.png'
+import marquee_url_m from '@/assets/img/marquee2_mobile.png'
 import { AnimatedBox2 } from './AnimatedBox'
 import Img from '../Image/image'
+import { HideOnMobile, ShowOnMobile } from '@/theme'
 
 export default function Marquee2() {
   return (
@@ -17,15 +19,31 @@ export default function Marquee2() {
         position: 'relative'
       }}
     >
-      <AnimatedBox2 sx={{ top: '6px', left: 0, width: '100%' }}>
-        <Box display="flex" width="100%">
-          <Img
-            src={marquee_url}
-            alt=""
-            sx={{ width: '100%', height: 'auto' }}
-          />
-        </Box>
-      </AnimatedBox2>
+      <ShowOnMobile>
+        <AnimatedBox2 sx={{ top: '6px', left: 0, width: '100%' }} duration={12}>
+          <Box width="100%">
+            {Array.from(Array(4).keys()).map((_, idx) => (
+              <Img
+                key={idx}
+                src={marquee_url_m}
+                alt=""
+                sx={{ width: '100%', height: 'auto' }}
+              />
+            ))}
+          </Box>
+        </AnimatedBox2>
+      </ShowOnMobile>
+      <HideOnMobile>
+        <AnimatedBox2 sx={{ top: '6px', left: 0, width: '100%' }}>
+          <Box width="100%">
+            <Img
+              src={marquee_url}
+              alt=""
+              sx={{ width: '100%', height: 'auto' }}
+            />
+          </Box>
+        </AnimatedBox2>{' '}
+      </HideOnMobile>
     </Box>
   )
 }

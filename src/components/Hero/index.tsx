@@ -7,7 +7,7 @@ import headUrl from '@/assets/svg/head.svg?url'
 import Img from '../Image/image'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 
-const title = 'Trade BTC with \nleverage using \nany altcoin as \ncollateral'
+const title = 'Trade BTC with \nleverage using any \naltcoin as \ncollateral'
 const subtitle =
   'Krav is a next generation decentralized quanto \nperpetual exchange.'
 
@@ -17,9 +17,9 @@ export default function Hero() {
       <ShowOnMobile>
         <Typography
           component="div"
-          fontSize={{ xs: 62, sm: 100 }}
+          fontSize={{ xs: 62, sm: 90 }}
           width="100%"
-          whiteSpace={'pre'}
+          whiteSpace={{ xs: 'normal', sm: 'pre' }}
           variant="h5"
           position="relative"
         >
@@ -31,43 +31,80 @@ export default function Hero() {
               width: { xs: 60, sm: 80 },
               position: 'absolute',
               right: 0,
-              bottom: { xs: -20, sm: 0 }
+              bottom: { xs: -50, sm: 0 }
             }}
           />
         </Typography>
       </ShowOnMobile>
       <Box
         maxWidth={1440}
-        overflow={'hidden'}
+        // overflow={'hidden'}
         maxHeight={'90vh'}
-        display="grid"
+        display={{ xs: 'grid', md: 'flex' }}
         width={'100%'}
-        justifyItems={'center'}
+        justifyItems={{ xs: 'center', md: undefined }}
         gridTemplateColumns={'auto 1fr auto'}
+        justifyContent={'space-between'}
         alignItems={'stretch'}
         gap={{ xs: 0, md: 23 }}
       >
-        <Img
-          src={poleUrl}
-          style={{
-            height: '100%',
-            width: 'auto',
-            margin: 'auto 0'
-          }}
-          alt=""
-        />
-        <HideOnMobile>
-          <Box flexGrow={1}>
+        <Box height={{ xs: '180px', md: '100%' }} sx={{}}>
+          <Img
+            src={poleUrl}
+            alt=""
+            sx={{
+              height: { xs: '150px', md: 'auto' },
+              width: { xs: 'auto', md: '180px' },
+              margin: 'auto 0'
+            }}
+          />
+        </Box>
+        <HideOnMobile sx={{ flexGrow: 1 }}>
+          <Box
+            position={'relative'}
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'space-between'}
+            height={'100%'}
+          >
             <Typography
-              fontSize={{ md: 79, lg: 110 }}
+              fontSize={{ md: 95, xl: 120 }}
               maxWidth={790}
               whiteSpace={'pre'}
               variant="h5"
+              lineHeight={'100%'}
+              letterSpacing={2.4}
             >
               {title}
             </Typography>
 
-            <Typography whiteSpace={'pre'}>{subtitle}</Typography>
+            <Typography whiteSpace={'pre'} mb={{ xs: 0, md: 80 }}>
+              {subtitle}
+            </Typography>
+            {/* <HideOnMobile> */}
+            <Box
+              display="flex"
+              height="100%"
+              flexDirection={'column'}
+              justifyContent={'space-between'}
+              alignItems={'center'}
+              position={'absolute'}
+              top={0}
+              right={0}
+            >
+              <Img
+                src={eyeUrl}
+                alt=""
+                sx={{ width: { xs: 80, md: 100, lg: 'auto' } }}
+              />
+
+              <Img
+                src={headUrl}
+                alt=""
+                sx={{ height: { md: 100, lg: 'auto' } }}
+              />
+            </Box>
+            {/* </HideOnMobile> */}
           </Box>
         </HideOnMobile>
         <ShowOnMobile>
@@ -86,38 +123,16 @@ export default function Hero() {
             >
               {subtitle}
             </Typography>
-            <Img src={headUrl} alt="" sx={{ height: 120 }} />
+            <Img src={headUrl} alt="" sx={{ height: { xs: 80, sm: 120 } }} />
           </Box>
         </ShowOnMobile>
-        <Box display={'flex'} height="100%">
-          <HideOnMobile>
-            <Box
-              display="flex"
-              height="100%"
-              flexDirection={'column'}
-              justifyContent={'space-between'}
-              alignItems={'center'}
-              width={'40%'}
-            >
-              <Img
-                src={eyeUrl}
-                alt=""
-                sx={{ width: { xs: 80, md: 100, lg: 'auto' } }}
-              />
-
-              <Img
-                src={headUrl}
-                alt=""
-                sx={{ height: { md: 100, lg: 'auto' } }}
-              />
-            </Box>
-          </HideOnMobile>
+        <Box height={{ xs: '180px', md: '100%' }} sx={{}}>
           <Img
             src={poleUrl}
             alt=""
-            style={{
-              height: '100%',
-              width: 'auto',
+            sx={{
+              height: { xs: '150px', md: 'auto' },
+              width: { xs: 'auto', md: '180px' },
               margin: 'auto 0'
             }}
           />

@@ -17,7 +17,7 @@ export default function Explaination1() {
           fontSize={{ xs: 32, md: 64 }}
           textTransform={'uppercase'}
         >
-          The First Ever Decentralized Quanto Exchange
+          NEXT GENERATION DECENTRALIZED QUANTO EXCHANGE
         </Typography>
         <Typography fontSize={{ xs: 14, md: 20 }} mt={{ xs: 24, md: 53 }}>
           A Quanto Contract is a type of futures contract where the underlying

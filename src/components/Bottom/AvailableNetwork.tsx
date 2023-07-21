@@ -1,7 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import { AnimatedBox2 } from '../Marquee/AnimatedBox'
 import Img from '../Image/image'
-import availableNetworkUrl from '@/assets/img/availableNetwork.png'
+import networkUrl1 from '@/assets/img/network1.png'
+import networkUrl2 from '@/assets/img/network2.png'
 
 export default function AvailableNetwork() {
   return (
@@ -11,7 +12,7 @@ export default function AvailableNetwork() {
       borderBottom={'1px solid #000000'}
     >
       <Box
-        padding={{ xs: '40px 24px 60px', md: '6rem' }}
+        padding={{ xs: '40px 24px 60px', md: '120px' }}
         borderBottom={{ xs: '1px solid #000000', md: 'none' }}
         borderRight={{ xs: undefined, md: '1px solid #000000' }}
       >
@@ -29,26 +30,24 @@ export default function AvailableNetwork() {
         width="100%"
       >
         <AnimatedBox2 style={{ width: '100%' }}>
-          <Img
-            src={availableNetworkUrl}
-            alt=""
-            style={{ width: '100%', height: 'auto' }}
-          />
-          <Img
-            src={availableNetworkUrl}
-            alt=""
-            style={{ width: '100%', height: 'auto' }}
-          />
-          <Img
-            src={availableNetworkUrl}
-            alt=""
-            style={{ width: '100%', height: 'auto' }}
-          />
-          <Img
-            src={availableNetworkUrl}
-            alt=""
-            style={{ width: '100%', height: 'auto' }}
-          />
+          {Array.from(Array(2).keys()).map((_, idx) => (
+            <Img
+              key={idx}
+              src={networkUrl1}
+              alt=""
+              style={{ width: '100%', height: 'auto' }}
+            />
+          ))}
+        </AnimatedBox2>
+        <AnimatedBox2 style={{ width: '100%' }} duration={11}>
+          {Array.from(Array(2).keys()).map((_, idx) => (
+            <Img
+              key={idx}
+              src={networkUrl2}
+              alt=""
+              style={{ width: '100%', height: 'auto' }}
+            />
+          ))}
         </AnimatedBox2>
       </Box>
     </Box>

@@ -16,16 +16,18 @@ export const AnimatedBox = styled('div')(() => ({
   position: 'absolute'
 }))
 
-export const AnimatedBox2 = styled('div')(() => ({
-  '@keyframes animatedBox2': {
-    from: {
-      transform: 'translateY(-25%)'
+export const AnimatedBox2 = styled('div')<{ duration?: number }>(
+  ({ duration }) => ({
+    '@keyframes animatedBox2': {
+      from: {
+        transform: 'translateY(-25%)'
+      },
+      to: {
+        transform: 'translateY(-50%)'
+      }
     },
-    to: {
-      transform: 'translateY(-50%)'
-    }
-  },
-  animation: 'animatedBox2 10s infinite linear',
-  animationDirection: 'inherit',
-  position: 'absolute'
-}))
+    animation: `animatedBox2 ${duration ?? '10'}s infinite linear`,
+    animationDirection: 'inherit',
+    position: 'absolute'
+  })
+)

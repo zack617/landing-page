@@ -15,8 +15,8 @@ export default function Home() {
         display="flex"
         flexDirection={'column'}
         alignItems={'center'}
-        px={{ xs: '24px', md: '40px', lg: '6rem' }}
-        pt={{ xs: '28px', md: '3rem' }}
+        px={{ xs: '24px', md: '40px', lg: '120px' }}
+        py={{ xs: '28px', md: '3rem' }}
         minHeight={'100vh'}
         gap={{ xs: 42, sm: 62, md: 100 }}
       >
@@ -30,8 +30,8 @@ export default function Home() {
         display="flex"
         flexDirection={'column'}
         alignItems={'center'}
-        px={{ xs: '24px', md: '40px', lg: '6rem' }}
-        pt={{ xs: '28px', md: '3rem' }}
+        px={{ xs: '24px', md: '40px', lg: '120px' }}
+        pt={{ xs: '60px', md: '120px' }}
         minHeight={'100vh'}
         gap={{ xs: 42, sm: 62, md: 100 }}
       >

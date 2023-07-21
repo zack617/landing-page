@@ -1,14 +1,18 @@
 'use client'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import slide1Url from '@/assets/img/slide1.png'
 import slide2Url from '@/assets/img/slide2.png'
 import slide3Url from '@/assets/img/slide3.png'
-
 import { Box, Typography } from '@mui/material'
 import { StaticImageData } from 'next/image'
 import Img from '../Image/image'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
+import { useEffect } from 'react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 type SlideContent = [string | StaticImageData, string, string]
 
@@ -31,6 +35,22 @@ const slides: SlideContent[] = [
 ]
 
 export default function Slides() {
+  useEffect(() => {
+    let sections = gsap.utils.toArray('.slide')
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#slides',
+        pin: true,
+        scrub: 0.1,
+        start: 'top top+=200',
+        end: '+=3000'
+      }
+    })
+  }, [])
+
   return (
     <>
       <HideOnMobile breakpoint="md">
@@ -40,20 +60,36 @@ export default function Slides() {
           sx={{
             maxWidth: '100vw',
             padding: {
-              xs: '24px 0 24px 6rem',
-              md: '6rem 0 6rem 6rem'
+              xs: '24px 0 24px 120px',
+              md: '120px 0 120px 120px'
             },
-            overflow: 'hidden',
-            '& .swiper': { overflow: 'hidden', maxWidth: '100%' },
-            '& .swiper-slide': {
-              width: { md: 'fit-content', xl: '38%' },
-              maxWidth: '38%!important',
-              display: 'flex',
-              justifyContent: 'center'
-            }
+            overflow: 'hidden'
+            // '& .swiper': { overflow: 'hidden', maxWidth: '100%' },
+            // '& .swiper-slide': {
+            //   width: { md: 'fit-content', xl: '38%' },
+            //   maxWidth: '38%!important',
+            //   display: 'flex',
+            //   justifyContent: 'center'
+            // }
           }}
         >
-          <Swiper
+          <Box
+            display={'flex'}
+            gap={{ xs: 40, md: 120 }}
+            sx={{
+              maxWidth: '100vw',
+              overflowX: 'hidden'
+            }}
+          >
+            {slides.map((item, idx) => (
+              <Box width="40vw" key={idx} className="slide">
+                <SwiperSlide key={item[1]}>
+                  <Card data={item} idx={idx} />
+                </SwiperSlide>{' '}
+              </Box>
+            ))}
+          </Box>
+          {/* <Swiper
             breakpoints={{
               1200: {
                 slidesPerView: 2.5,
@@ -63,12 +99,8 @@ export default function Slides() {
             slidesPerView={2.2}
             spaceBetween={40}
           >
-            {slides.map((item, idx) => (
-              <SwiperSlide key={item[1]}>
-                <Card data={item} idx={idx} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+         
+          </Swiper> */}
         </Box>
       </HideOnMobile>
       <ShowOnMobile breakpoint="md">
@@ -96,7 +128,7 @@ function Card({
         idx === 0 ? undefined : { xs: '1px solid #000000', md: 'none' }
       }
       display={'grid'}
-      justifyItems={{ xs: 'left', sm: 'center', md: undefined }}
+      justifyItems={{ xs: 'left', sm: 'center', md: 'left' }}
     >
       <Img src={imgUrl} alt="" />
       <Typography
