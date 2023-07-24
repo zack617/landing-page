@@ -37,16 +37,18 @@ const slides: SlideContent[] = [
 export default function Slides() {
   useEffect(() => {
     let sections = gsap.utils.toArray('.slide')
+    const slides = document.getElementById('slides')
 
     gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
       ease: 'none',
       scrollTrigger: {
         trigger: '#slides',
-        pin: true,
-        scrub: 0.1,
+        anticipatePin: 1,
+        pin: '#bottom',
+        scrub: 1,
         start: 'top top+=200',
-        end: '+=3000'
+        end: () => '+=' + (slides ? slides.scrollWidth * 2.5 : 4000)
       }
     })
   }, [])
@@ -60,8 +62,8 @@ export default function Slides() {
           sx={{
             maxWidth: '100vw',
             padding: {
-              xs: '24px 0 24px 120px',
-              md: '120px 0 120px 120px'
+              xs: '24px 0',
+              md: '120px 0'
             },
             overflow: 'hidden'
             // '& .swiper': { overflow: 'hidden', maxWidth: '100%' },
@@ -124,6 +126,15 @@ function Card({
   return (
     <Box
       padding={{ xs: '40px 24px', md: 0 }}
+      pl={
+        // idx === 0
+        //   ?
+        {
+          xs: '24px',
+          md: '120px'
+        }
+        // : { xs: '40px 24px', md: 0 }
+      }
       borderTop={
         idx === 0 ? undefined : { xs: '1px solid #000000', md: 'none' }
       }

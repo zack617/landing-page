@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+.pin-spacer {
+  overflow: hidden!important
+}
+
 @font-face {
   font-family: 'Flexa';
   font-weight: 900;

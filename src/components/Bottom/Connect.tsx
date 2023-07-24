@@ -17,7 +17,12 @@ export default function Connect() {
       justifyContent={'center'}
     >
       <HideOnMobile>
-        <Typography variant="h5" fontSize={110} color="#ffffff">
+        <Typography
+          variant="h5"
+          fontSize={110}
+          color="#ffffff"
+          letterSpacing={'2.4'}
+        >
           connect wallet
           <br /> to earn $krav
         </Typography>

@@ -20,7 +20,7 @@ export default function MarqueeBlue() {
         overflow: 'hidden'
       }}
     >
-      <AnimatedBox sx={{ top: { xs: 6, md: -7 } }}>
+      <AnimatedBox sx={{ top: { xs: 12, md: 0 } }}>
         <Typography
           fontSize={{ xs: 64, md: 180 }}
           variant="h5"

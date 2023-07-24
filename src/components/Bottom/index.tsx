@@ -8,7 +8,7 @@ import AuditedBy from './AuditedBy'
 
 export default function Bottom() {
   return (
-    <Box>
+    <Box id="bottom">
       <MarqueeBlue />
       <AvailableNetwork />
       <Slides />
