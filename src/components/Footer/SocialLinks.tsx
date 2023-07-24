@@ -19,12 +19,12 @@ const links = [
   {
     title: 'Twitter',
     icon: TwitterIcon,
-    href: ''
+    href: 'https://twitter.com/kravtrade'
   },
   {
     title: 'Telegram',
     icon: TelegramIcon,
-    href: ''
+    href: 'https://t.me/+tlNZPGwYlu9lOWIx'
   }
 ]
 

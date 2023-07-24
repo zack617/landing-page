@@ -10,7 +10,11 @@ import {
 import MobileMenu from './MobileMenu'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 
-const pages = ['COMMUNITY', 'GOVERNANCE', 'DOCS']
+const pages = [
+  ['COMMUNITY', ''],
+  ['GOVERNANCE', ''],
+  ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction']
+]
 
 export default function Navbar() {
   return (
@@ -37,8 +41,11 @@ export default function Navbar() {
               gap: 80
             }}
           >
-            {pages.map((page) => (
+            {pages.map(([page, link]) => (
               <Button
+                component="a"
+                href={link}
+                target="_blank"
                 key={page}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >

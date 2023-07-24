@@ -13,7 +13,7 @@ import { useState } from 'react'
 import buttonBgUrl from '@/assets/svg/button_long_bg.svg?url'
 import SocialLinks from '../Footer/SocialLinks'
 
-export default function MobileMenu({ pages }: { pages: string[] }) {
+export default function MobileMenu({ pages }: { pages: [string, string][] }) {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -96,9 +96,19 @@ export default function MobileMenu({ pages }: { pages: string[] }) {
         }}
       >
         <Box component={'ul'} display={'grid'} gap={20}>
-          {pages.map((page) => (
+          {pages.map(([page, link]) => (
             <MenuItem key={page} onClick={handleCloseNavMenu}>
-              <Typography textAlign="center" variant="h5">
+              <Typography
+                textAlign="center"
+                variant="h5"
+                component={'a'}
+                href={link}
+                target="_blank"
+                sx={{
+                  textDecoration: 'none',
+                  color: 'inherit'
+                }}
+              >
                 {page}
               </Typography>
             </MenuItem>
