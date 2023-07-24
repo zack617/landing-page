@@ -10,7 +10,7 @@ import {
 import MobileMenu from './MobileMenu'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 
-const pages = [
+const pages: [string, string][] = [
   ['COMMUNITY', ''],
   ['GOVERNANCE', ''],
   ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction']
